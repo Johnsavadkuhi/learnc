@@ -1,0 +1,4 @@
+gcc  -c -O3 main.c 
+
+objdump main.o -d 
+
