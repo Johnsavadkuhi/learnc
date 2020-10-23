@@ -53,31 +53,53 @@ test_string(){
     fi
 }
 
-function test_number {
+# function test_number {
     
-    INT=-5 
+#     INT=-5 
 
-    if [ -z "$INT" ]; then 
-        echo "INT is empty." >&2 
-    fi 
+#     if [ -z "$INT" ]; then 
+#         echo "INT is empty." >&2 
+#     fi 
 
-    if [ $INT -eq 0 ] ; then 
-        echo "INT is zero" 
-    fi 
+#     if [ $INT -eq 0 ] ; then 
+#         echo "INT is zero" 
+#     fi 
 
+#     else 
+#         if [ $INT -lt 0 ]; then 
+#             echo "INT is negative" 
+#         else 
+#             echo "INT is positive"
+#         fi 
+#         if [ $((INT%2)) -eq 0 ]; then 
+#             echo "INT is even "
+#         else 
+#             echo "INT is odd" 
+#         fi 
+#     fi 
+
+# }
+
+INT=10 
+
+if [ -z "$INT" ];then 
+    echo "INT si empty. " >&2
+    exit 
+fi 
+
+if [ $INT -eq 0 ]; then 
+    echo "INT is zero" 
+
+else 
+
+    if [ $INT -lt 0  ]; then 
+        echo "INT is gegative "
     else 
-        if [ $INT -lt 0 ]; then 
-            echo "INT is negative" 
-        else 
-            echo "INT is positive"
-        fi 
-        if [ $((INT%2)) -eq 0 ]; then 
-            echo "INT is even "
-        else 
-            echo "INT is odd" 
-        fi 
+        echo "INT is positive. "
     fi 
-
-}
-
-test_number 
+    if [ $((INT%2)) -eq 0 ]; then 
+        echo "INT is even"
+    else 
+        echo "INT is odd" 
+    fi 
+fi 
